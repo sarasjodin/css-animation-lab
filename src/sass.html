@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <title>About Sass | Sassy Sheets with scss syntax</title>
+    <!-- Google Fonts (Preloaded for better performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./scripts/index.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="navbar header">
+        <div class="container">
+          <!-- Logo och företagsnamn -->
+          <a
+            href="https://it.linkedin.com/in/sjodinscolari"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Besök Saras LinkedIn-sida"
+            ><picture class="logo">
+              <!-- AVIF-format för bästa komprimering -->
+              <source
+                srcset="
+                  ./images/developer-800x800.avif 800w,
+                  ./images/developer-600x600.avif 600w,
+                  ./images/developer-400x400.avif 400w,
+                  ./images/developer-200x200.avif 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/avif"
+              />
+              <!-- WebP-format som alternativ -->
+              <source
+                srcset="
+                  ./images/developer-800x800.webp 800w,
+                  ./images/developer-600x600.webp 600w,
+                  ./images/developer-400x400.webp 400w,
+                  ./images/developer-200x200.webp 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/webp"
+              />
+              <!-- JPG som fallback för äldre webbläsare -->
+              <img
+                src="./images/developer-400x400.jpg"
+                srcset="
+                  ./images/developer-800x800.jpg 800w,
+                  ./images/developer-600x600.jpg 600w,
+                  ./images/developer-400x400.jpg 400w,
+                  ./images/developer-200x200.jpg 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                alt="Sara, webbutvecklaren bakom denna webbplats"
+                width="100"
+                height="100"
+              />
+            </picture>
+            <span class="company-name">Sassy Sara</span>
+          </a>
+
+          <!-- Sökfält -->
+          <!--  <div class="search-container">
+            <input type="text" class="search-input" placeholder="Sök..." />
+          </div> -->
+
+          <!-- Hamburgermeny-knapp -->
+          <button
+            class="menu-toggle"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <!-- Navigationsmeny -->
+          <nav class="nav">
+            <ul class="menu">
+              <li class="menu-item"><a href="./index.html">Home</a></li>
+              <li class="menu-item"><a href="./about.html">About</a></li>
+              <li class="menu-item active"><a href="#">Sass</a></li>
+              <li class="menu-item"><a href="./process.html">Process</a></li>
+              <li class="dropdown">
+                <a href="#">Portfolio items ▾</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      href="https://ai-poems-generator.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open AI Poem Generator in a new tab"
+                    >
+                      AI poem generator 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://climasense.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Weather App in a new tab"
+                    >
+                      Weather app 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://timezonesclocks.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Time Zone Converter in a new tab"
+                    >
+                      Time zone converter 🔗
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button class="primary button" id="theme-toggle">🌙 Dark mode</button>
+      </header>
+      <main id="sass-page">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>More about my "Sassy Website"</h1>
+            <p>
+              This project is part of the Web Development program at Mid Sweden
+              University and involves creating a website using<br />Node.js,
+              NPM, Parcel, Sass (SCSS) utilising the 7-1 method.
+            </p>
+          </div>
+        </section>
+        <section class="features">
+          <div>
+            <h2>Purpose of the assignment</h2>
+            <ul>
+              <li>Understand the purpose of CSS preprocessors.</li>
+              <li>Learn how to use SASS to simplify CSS development.</li>
+              <li>
+                Practically apply the development environment set up in previous
+                modules.
+              </li>
+              <li>
+                Be able to automate the conversion of SASS files using Parcel.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="features">
+          <div>
+            <h2>Minimum requirements</h2>
+            <ul>
+              <li>
+                A simple, fictional website with at least five menu options (not
+                all need to be functional).
+              </li>
+              <li>
+                At least two HTML pages (a homepage and a subpage about Sass).
+              </li>
+              <li>
+                Based on a Parcel boilerplate, but without reusing old CSS
+                files.
+              </li>
+              <li>
+                Use of variables (at least the color scheme should be stored as
+                variables).
+              </li>
+              <li>
+                Color functions (at minimum, "darken" and "lighten" should be
+                used, but more are encouraged).
+              </li>
+              <li>
+                Nesting, Mixins, and Selector Inheritance (using the "@extend"
+                keyword).
+              </li>
+              <li>
+                If/else statements, at least one partial, and a well-structured
+                CSS file organization.
+              </li>
+              <li>
+                Deployment should not use FTP/SFTP hosting but instead platforms
+                such as GitHub Pages, Netlify, Vercel, or Render.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="features">
+          <div>
+            <h2>My evaluation</h2>
+            <p>
+              Sass extends the functionality of regular CSS by introducing
+              powerful features that make styling more efficient, maintainable,
+              and scalable. Some key advantages and disadvantages of using Sass
+              include:
+            </p>
+
+            <h3>Pros of the CSS preprocessor Sass</h3>
+            <ul>
+              <li>
+                <strong>Better organization</strong><br />Using partials and
+                imports allows for a structured and modular CSS approach.
+              </li>
+              <li>
+                <strong>Variables</strong><br />Define colors, font sizes, and
+                other values in one place and reuse them throughout the styles.
+              </li>
+              <li>
+                <strong>Mixins</strong><br />Write reusable blocks of CSS to
+                avoid code repetition and improve maintainability.
+              </li>
+              <li>
+                <strong>Selector inheritance @extend</strong><br />Helps in
+                reducing redundancy by allowing shared styles between elements.
+              </li>
+              <li>
+                <strong>Functions & nesting</strong><br />Improves readability
+                and makes it easier to write CSS with logical hierarchy.
+              </li>
+              <li>
+                <strong>Math operations</strong><br />Enables calculations
+                directly in CSS, such as adjusting padding or font sizes
+                dynamically.
+              </li>
+            </ul>
+
+            <h3>Cons of the CSS preprocessor Sass</h3>
+            <ul>
+              <li>
+                <strong>Learning curve</strong><br />While Sass simplifies many
+                CSS tasks, beginners may find it overwhelming at first.
+              </li>
+              <li>
+                <strong>Compilation required</strong><br />Unlike standard CSS,
+                Sass needs to be compiled into regular CSS before it can be used
+                in the browser. Parcel is taking care of that for this website.
+              </li>
+              <li>
+                <strong>Can encourage overuse</strong><br />Nesting too deeply
+                can lead to overly specific and difficult-to-maintain styles.
+              </li>
+              <li>
+                <strong>Tooling dependency</strong><br />Requires Node.js, npm,
+                and build tools like Parcel, Webpack or Vite, which adds
+                complexity.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="features">
+          <div>
+            <h3>How was it to get started working with a CSS preprocessor?</h3>
+
+            <article>
+              <h4>The initial challenge</h4>
+              <p>
+                Transitioning from regular CSS to Sass was initially
+                overwhelming due to the new syntax and additional setup
+                required. Instead of taking small steps, I decided to dive
+                straight into the
+                <strong>7-1 pattern method</strong>, which is quite complex for
+                someone without much prior Sass experience.
+              </p>
+            </article>
+
+            <article>
+              <h4>The learning curve</h4>
+              <p>
+                As I became more comfortable with
+                <strong>variables, mixins, and nesting</strong>, I quickly
+                realized the immense benefits of Sass. The ability to store and
+                reuse values, and to be able to nest made me think a lot about
+                the structure and readability.
+              </p>
+            </article>
+
+            <article>
+              <h4>Boosting efficiency with automation</h4>
+              <p>
+                One of the biggest game-changers was automating the Sass
+                compilation process using <strong>Parcel</strong>. This made it
+                seamless to integrate Sass into my workflow, eliminating the
+                need for manual SCSS to CSS updates and ensuring that all styles
+                were efficiently processed.
+              </p>
+            </article>
+
+            <article>
+              <h4>The power of structured styling</h4>
+              <p>
+                The ability to
+                <strong>structure and manage multiple stylesheets</strong>
+                within a single main.scss file has significantly streamlined my
+                development process. By organizing styles into modular partials,
+                I can maintain a clean, scalable, and **efficient** codebase,
+                making future updates seamless. I look forward to perfecting my
+                workflow and exploring new ideas.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="legal-footer-section">
+          <div>
+            <h2>Sara<br />Sjoedin Scolari</h2>
+            <p>@2025 All rights reserved</p>
+          </div>
+          <div class="logo-container">
+            <a
+              href="https://it.linkedin.com/in/sjodinscolari"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besök Saras LinkedIn-sida"
+              ><picture>
+                <!-- AVIF-format för bästa komprimering -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.avif 800w,
+                    ./images/developer-600x600.avif 600w,
+                    ./images/developer-400x400.avif 400w,
+                    ./images/developer-200x200.avif 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/avif"
+                />
+                <!-- WebP-format som alternativ -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.webp 800w,
+                    ./images/developer-600x600.webp 600w,
+                    ./images/developer-400x400.webp 400w,
+                    ./images/developer-200x200.webp 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/webp"
+                />
+                <!-- JPG som fallback för äldre webbläsare -->
+                <img
+                  src="./images/developer-400x400.jpg"
+                  srcset="
+                    ./images/developer-800x800.jpg 800w,
+                    ./images/developer-600x600.jpg 600w,
+                    ./images/developer-400x400.jpg 400w,
+                    ./images/developer-200x200.jpg 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  alt="Sara, webbutvecklaren bakom denna webbplats"
+                  width="175"
+                  height="175"
+                /> </picture
+            ></a>
+          </div>
+        </div>
+        <div class="company-footer-info">
+          <h2>Places I call home</h2>
+          <address>
+            <h3>Italy</h3>
+            <ul>
+              <li>Milano</li>
+              <li>Valpiana, Vercelli, Piemonte</li>
+            </ul>
+            <h3>Sweden</h3>
+            <ul>
+              <li>Stockholm</li>
+              <li>Myckelgensjö, Västernorrland</li>
+              <li>Örebro</li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="company-footer-contact">
+          <h2>Email me</h2>
+          <address>
+            <ul>
+              <li>
+                <a href="mailto:sara@sarasjodin.com">sara@sarasjodin.com</a>
+              </li>
+            </ul>
+          </address>
+          <h2>Call me</h2>
+          <address>
+            <ul>
+              <li>
+                <a
+                  id="phone-link"
+                  href="#"
+                  aria-label="Call Sara at international number +39 345 4171 570"
+                >
+                  📞 Click to reveal number
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <div class="social-footer-menu">
+            <h2>Follow me</h2>
+            <ul class="social-icons">
+              <!-- Facebook -->
+              <li class="social-icon">
+                <a
+                  class="icon circle icon-white"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår Facebook-sida"
+                >
+                  <picture>
+                    <source srcset="./images/facebook.webp" type="image/webp" />
+                    <img
+                      src="./images/facebook.png"
+                      alt="Facebook"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li class="social-icon linkedin">
+                <a
+                  class="icon linkedin square icon-bw"
+                  href="https://it.linkedin.com/in/sjodinscolari"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår LinkedIn-sida"
+                >
+                  <picture>
+                    <source srcset="./images/linkedin.webp" type="image/webp" />
+                    <img
+                      src="./images/linkedin.png"
+                      alt="LinkedIn"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li>
+
+              <!-- Instagram -->
+              <li class="social-icon">
+                <a
+                  class="icon square icon-white"
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår Instagram-sida"
+                >
+                  <picture>
+                    <source
+                      srcset="./images/instagram.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/instagram.png"
+                      alt="Instagram"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li>
+
+              <!-- X (Tidigare Twitter) -->
+              <!-- <li class="social-icon">
+                <a
+                  class="icon circle icon-white"
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår X-sida"
+                >
+                  <picture>
+                    <source srcset="./images/x.webp" type="image/webp" />
+                    <img
+                      src="./images/x.png"
+                      alt="X"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li> -->
+
+              <!-- Pinterest -->
+              <!-- <li class="social-icon pinterest">
+                <a
+                  class="icon circle icon-bw"
+                  href="https://www.pinterest.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår Pinterest-sida"
+                >
+                  <picture>
+                    <source
+                      srcset="./images/pinterest.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/pinterest.png"
+                      alt="Pinterest"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="legal-footer-menu">
+          <h2>My policies</h2>
+          <nav aria-label="Legal Policies">
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+              </li>
+              <li class="menu-item">
+                <a href="./cookie-policy.html">Cookie Policy</a>
+              </li>
+              <li class="menu-item">
+                <a href="./terms-of-service.html">Terms of Service</a>
+              </li>
+              <li class="menu-item">
+                <a href="./accessibility-statement.html"
+                  >Accessibility Statement</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-footer">
+          <h2>Navigation</h2>
+          <nav aria-label="Website Navigation">
+            <ul class="menu">
+              <li class="menu-item"><a href="./index.html">Home</a></li>
+              <li class="menu-item"><a href="./about.html">About</a></li>
+              <li class="menu-item active"><a href="#">Sass</a></li>
+              <li class="menu-item"><a href="./process.html">Process</a></li>
+              <li>
+                <a
+                  href="https://saras-portfolio.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Sara's portfolio website (opens in a new tab)"
+                >
+                  Sara's Portfolio 🔗
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

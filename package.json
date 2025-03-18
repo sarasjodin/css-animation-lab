@@ -1,0 +1,48 @@
+{
+  "name": "boilerplate-scss-parcel",
+  "version": "1.0.0",
+  "type": "module",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11",
+    "not op_mini all"
+  ],
+  "scripts": {
+    "restart:dev": "npx parcel serve src/*.html --port 1234",
+    "build": "parcel build src/styles/main.scss src/index.html src/about.html src/process.html src/sass.html --log-level verbose --dist-dir dist/ --public-url ./ && node fix-html-paths.js",
+    "clean:local": "if exist .parcel-cache rmdir /s /q .parcel-cache & if exist dist rmdir /s /q dist",
+    "build:dev": "npm run clean:local && parcel build src/index.html src/about.html src/process.html src/sass.html --dist-dir dist/",
+    "start:dev": "npx parcel src/*.html",
+    "dev": "npm run build:dev && npm run start:dev && echo '✅ Rekommenderad för snabb testning av utveckling med HMR (Hot Module Reloading). Om CSS inte laddas, kontrollera att JS importerar SCSS via import \"../styles/main.scss\"'",
+    "clean:prod": "echo Kontrollera node_modules... & if exist node_modules (echo 🔴 node_modules finns, raderar... & rmdir /s /q node_modules) else (echo ✅ node_modules saknas redan) & if exist package-lock.json del package-lock.json & if exist .parcel-cache rmdir /s /q .parcel-cache & if exist dist rmdir /s /q dist\" && npm cache clean --force && npm install",
+    "build:prod": "parcel build src/styles/main.scss src/index.html src/about.html src/process.html src/sass.html --log-level verbose --dist-dir dist/ --public-url ./ && node fix-html-paths.js",
+    "prod:file": "npm run clean:prod && npm run build:prod && start dist/index.html && echo '✅ dist/index.html öppnas nu i webbläsaren (Rekommenderad för offline-visning och statiska webbplatser utan serverkrav). Om CSS saknas, kontrollera att HTML använder <link rel=\"stylesheet\" href=\"./styles/main.css\">'",
+    "prod:serve": "(npm list --depth=1 serve >nul 2>&1 || npm install --save-dev serve) && npm run clean:prod && npm run build:prod && npx serve dist/ -s -l 3000 --single && echo '✅ dist/index.html öppnas nu i en statisk server på http://localhost:3000 (Rekommenderad för testning av produktion. Saknar HMR.) Om CSS inte laddas, kontrollera att HTML länkar till rätt CSS-fil.'"  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarasjodin/boilerplate-scss-parcel.git"
+  },
+  "author": "Sara Sjodin Scolari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarasjodin/boilerplate-scss-parcel/issues"
+  },
+  "homepage": "https://github.com/sarasjodin/boilerplate-scss-parcel#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.14.0",
+    "http-server": "14.1.1",
+    "normalize-url": "8.0.1",
+    "parcel": "2.14.0",
+    "sass": "1.86.0",
+    "serve": "14.2.4",
+    "stylelint": "16.16.0",
+    "stylelint-scss": "6.11.1",
+    "svgo": "3.3.2"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "preinstall": "npm -v | grep '9.' || (echo '⚠️ Please use npm 9.x' && exit 1)"
+  }
+}
