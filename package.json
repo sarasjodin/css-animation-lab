@@ -1,54 +1,30 @@
 {
-  "name": "boilerplate-scss-parcel",
+  "name": "css-animations-lab",
   "version": "1.0.0",
-  "type": "module",
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11",
-    "not op_mini all"
-  ],
+  "description": "",
+  "main": "bs-config.js",
   "scripts": {
-    "restart:dev": "npx parcel serve src/*.html --port 1234",
-    "build": "parcel build src/index.html dist",
-    "clean:local": "if exist .parcel-cache rmdir /s /q .parcel-cache & if exist dist rmdir /s /q dist",
-    "build:dev": "npm run clean:local && parcel build src/index.html src/about.html src/visuals.html src/triggers.html src/motions.html --dist-dir dist/",
-    "start:dev": "npx parcel src/*.html",
-    "dev": "npm run build:dev && npm run start:dev && echo '✅ Rekommenderad för snabb testning av utveckling med HMR (Hot Module Reloading). Om CSS inte laddas, kontrollera att JS importerar SCSS via import \"../styles/main.scss\"'",
-    "clean:prod": "echo Kontrollera node_modules... & if exist node_modules (echo 🔴 node_modules finns, raderar... & rmdir /s /q node_modules) else (echo ✅ node_modules saknas redan) & if exist package-lock.json del package-lock.json & if exist .parcel-cache rmdir /s /q .parcel-cache & if exist dist rmdir /s /q dist\" && npm cache clean --force && npm install",
-    "build:prod": "npx parcel build src/styles/main.scss src/index.html src/about.html src/visuals.html src/triggers.html src/motions.html --log-level verbose --public-url ./ && node fix-html-paths.js",
-    "prod:file": "npm run clean:prod && npm run build:prod && (start dist/index.html || open dist/index.html) && echo '✅ dist/index.html öppnas nu...'",
-    "prod:serve": "(npm list --depth=1 serve >nul 2>&1 || npm install --save-dev serve) && npm run clean:prod && npm run build:prod && npx serve dist/ -s -l 3000 --single && echo '✅ dist/index.html öppnas nu i en statisk server på http://localhost:3000 (Rekommenderad för testning av produktion. Saknar HMR.) Om CSS inte laddas, kontrollera att HTML länkar till rätt CSS-fil.'"
+    "dev": "parcel serve src/index.html --port 1234",
+    "build": "parcel build src/index.html src/about.html src/visuals.html src/triggers.html src/motions.html --dist-dir dist --public-url ./",
+    "clean": "rm -rf .parcel-cache dist node_modules && npm cache clean --force",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && echo '✅ Deployment files are now ready in dist/'",
+    "serve": "npx serve dist -s -l 3000"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sarasjodin/boilerplate-scss-parcel.git"
+    "url": "git+https://github.com/sarasjodin/css-animation-lab.git"
   },
-  "author": "Sara Sjodin Scolari",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/sarasjodin/boilerplate-scss-parcel/issues"
+    "url": "https://github.com/sarasjodin/css-animation-lab/issues"
   },
-  "homepage": "https://github.com/sarasjodin/boilerplate-scss-parcel#readme",
+  "homepage": "https://github.com/sarasjodin/css-animation-lab#readme",
   "devDependencies": {
-    "@parcel/config-default": "2.14.1",
-    "@parcel/transformer-postcss": "2.14.1",
-    "@parcel/transformer-sass": "2.14.1",
-    "http-server": "14.1.1",
-    "normalize-url": "8.0.1",
-    "parcel": "2.14.1",
-    "postcss": "8.5.3",
-    "postcss-modules": "6.0.1",
-    "postcss-scss": "4.0.9",
-    "sass": "1.86.0",
-    "serve": "14.2.4",
-    "stylelint": "16.16.0",
-    "stylelint-scss": "6.11.1",
-    "svgo": "3.3.2"
-  },
-  "engines": {
-    "node": "v22.13.0",
-    "preinstall": "npm -v | grep '9.' || (echo '⚠️ Please use npm 9.x' && exit 1)"
+    "parcel": "2.14.1"
   }
 }
