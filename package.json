@@ -33,6 +33,7 @@
   "homepage": "https://github.com/sarasjodin/boilerplate-scss-parcel#readme",
   "devDependencies": {
     "@parcel/config-default": "2.14.1",
+    "@parcel/transformer-postcss": "2.14.1",
     "@parcel/transformer-sass": "2.14.1",
     "http-server": "14.1.1",
     "normalize-url": "8.0.1",
