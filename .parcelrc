@@ -15,9 +15,6 @@
     ]
   },
   "optimizers": {
-    "*.js": [
-      "@parcel/optimizer-js"
-    ],
     "*.html": [
       "@parcel/optimizer-htmlnano"
     ],
