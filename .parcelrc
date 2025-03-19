@@ -15,8 +15,14 @@
     ]
   },
   "optimizers": {
-    "*.js": [],
-    "*.html": [],
-    "*.css": []
+    "*.js": [
+      "@parcel/optimizer-js"
+    ],
+    "*.html": [
+      "@parcel/optimizer-htmlnano"
+    ],
+    "*.css": [
+      "@parcel/optimizer-css"
+    ]
   }
 }
