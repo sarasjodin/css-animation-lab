@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel serve src/index.html --port 1234",
-    "build": "parcel build src/index.html src/about.html src/visuals.html src/triggers.html src/motions.html dist/ --public-url ./",
+    "build": "parcel build src/index.html src/about.html src/visuals.html src/triggers.html src/motions.html --output-dir dist --public-url ./",
     "clean": "rm -rf .parcel-cache dist node_modules && npm cache clean --force",
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
