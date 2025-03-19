@@ -15,10 +15,14 @@ main {
   padding: 40px 20px;
 }
 
+.animations ol,
+.animations p,
 .features ol,
 .features p {
   padding: 10px 15px;
 }
+
+.animations ul,
 .features ul {
   padding: 10px 15px;
 
@@ -27,10 +31,12 @@ main {
   }
 }
 
-.features ul > li {
+.features ul > li,
+.animations ul > li {
   list-style: none;
 }
 
+.animations .portfolio-links li,
 .features .portfolio-links li {
   list-style: unset;
 }

@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as vars;
+
+#visual-page .hero {
+  background: #e5e0e3;
+}
+
+.dark-mode #visual-page .hero {
+  background: map-get(vars.$dark-theme, 'bg');
+}
+
+.animations,
+.features {
+  max-width: 100%;
+  overflow-x: auto; /* Gör att det går att rulla horisontellt om texten är för lång */
+}
+
+#visual-page > section.animations > div > h2 {
+  text-align: center;
+}

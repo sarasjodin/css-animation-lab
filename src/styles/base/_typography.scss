@@ -14,6 +14,7 @@ h2,
 h3,
 .heading {
   font-family: vars.$font-inter;
+  overflow-wrap: break-word;
 }
 
 // Specifika rubrikstilar
@@ -23,9 +24,19 @@ h1 {
   text-align: center;
 }
 
+.animations h2 {
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
 h2 {
   font-size: 2.2rem;
   font-weight: bold;
+  overflow-wrap: break-word;
+}
+
+footer h2 {
+  overflow-wrap: unset;
 }
 
 h3 {

@@ -167,7 +167,7 @@ footer li:last-child {
 }
 
 a[href^='mailto'] {
-  word-break: break-word; // Bryter ordet om det behövs
+  word-break: break-word;
   overflow-wrap: break-word; // Gör att e-post kan brytas naturligt
   display: inline-block; // Säkerställer att länken bryts korrekt
 }

@@ -1,0 +1,269 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixin;
+
+/* Index page */
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 15px #0060c7, 0 0 25px #0060c7;
+  }
+  50% {
+    text-shadow: 0 0 15px #464646, 0 0 25px #0060c7;
+  }
+  100% {
+    text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff;
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 15px #9fdfe6, 0 0 35px #4ec4d1;
+  }
+  50% {
+    text-shadow: 0 0 15px #ffffff, 0 0 35px #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 15px #fc84fc, 0 0 35px #ff00ff;
+  }
+}
+
+/* Cosmic Motions page */
+@keyframes orbit1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50px, -50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(-100px, 0) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50px, 50px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes orbit2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(80px, 80px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes orbit3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(40px, -60px) rotate(90deg);
+  }
+  50% {
+    transform: translate(-40px, 60px) rotate(180deg);
+  }
+  75% {
+    transform: translate(60px, -30px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes orbit4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(100vw, -50vh) rotate(320deg);
+    filter: brightness(1.5);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-10vw, 100vh) rotate(320deg);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle1 {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes twinkle2 {
+  0% {
+    opacity: 0.2;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.7);
+  }
+}
+
+@keyframes twinkle3 {
+  0% {
+    opacity: 0.2;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+}
+
+/* Typewriter - Visuals page */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Typewriter OCH Loading bar */
+@keyframes blink {
+  0% {
+    opacity: 1;
+    border-color: white; /* Ursprunglig färg */
+  }
+  50% {
+    opacity: 0.7;
+    border-color: transparent; /* Blinkande effekt */
+  }
+  80% {
+    opacity: 1;
+    border-color: white; /* Återställ till ursprunglig färg */
+  }
+  100% {
+    opacity: 0.8;
+    border-color: transparent; /* Blinkande effekt */
+  }
+}
+
+/* Photo - Visuals page */
+/* Animation7: Snurrar och zoomar kontinuerligt */
+@keyframes spin-zoom {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Visuals page - Animation 1 Somewhere over the rainbow*/
+@keyframes rainbow-text {
+  0% {
+    color: red;
+  }
+  16% {
+    color: orange;
+  }
+  33% {
+    color: yellow;
+  }
+  50% {
+    color: green;
+  }
+  66% {
+    color: blue;
+  }
+  83% {
+    color: indigo;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+/* Visuals page - Animation 2 Skies are blue*/
+/* Visuals page - Animation 3 And the dreams that...*/
+/* Visuals page - Animation 4 Really do come true*/
+@keyframes rainbow-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media queries changes for smaller devices */
+
+@media (max-width: 768px) {
+  @keyframes orbit1 {
+    0% {
+      transform: translate(2vw, 2vh) rotate(0deg);
+    }
+    50% {
+      transform: translate(-2vw, -2vh) rotate(180deg);
+    }
+    100% {
+      transform: translate(2vw, 2vh) rotate(360deg);
+    }
+  }
+
+  @keyframes orbit4 {
+    0% {
+      transform: translate(3vw, 3vh) rotate(0deg);
+    }
+    50% {
+      transform: translate(-3vw, -3vh) rotate(180deg);
+    }
+    100% {
+      transform: translate(3vw, 3vh) rotate(360deg);
+    }
+  }
+
+  @keyframes fallmobile {
+    0% {
+      transform: translate(50vw, 0vh) rotate(320deg); /* Start further right */
+      filter: brightness(2);
+    }
+    50% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(-20vw, 50vh) rotate(320deg); /* Ends far left */
+      opacity: 0;
+    }
+  }
+}

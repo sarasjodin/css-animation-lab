@@ -1,0 +1,391 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixin;
+
+.animation1 {
+  padding: 5rem 0 0 0;
+  font-size: 30px;
+  font-weight: bolder;
+  animation: rainbow-text 10s infinite linear;
+  text-align: center;
+}
+
+.animation3 {
+  padding: 0;
+  font-size: 30px;
+  font-weight: bolder;
+  background: linear-gradient(
+    45deg,
+    rgb(198, 0, 0),
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    rgb(242, 14, 181)
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-gradient 5s infinite linear;
+  text-align: center;
+}
+
+.animation4 {
+  padding: 0 0 5rem 0;
+  font-size: 30px;
+  font-weight: bolder;
+  background: linear-gradient(
+    45deg,
+    rgb(0, 0, 0),
+    rgb(40, 40, 40),
+    rgb(141, 141, 141),
+    rgb(231, 231, 231),
+    rgb(255, 255, 255)
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-gradient 5s infinite linear;
+  text-align: center;
+}
+
+.animation2 {
+  padding: 0;
+  font-size: 30px;
+  font-weight: bolder;
+  background: linear-gradient(
+    45deg,
+    rgb(95, 255, 250),
+    rgb(12, 171, 211),
+    blue,
+    indigo
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-gradient 5s infinite linear;
+  text-align: center;
+}
+
+cite {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+}
+
+#visual-page > section:nth-child(4) > div > picture > img,
+#trigger-page > section:nth-child(4) > div > picture > img {
+  display: block;
+  margin: auto;
+}
+
+#visual-page > section:nth-child(4) > div > cite,
+#trigger-page > section:nth-child(4) > div > cite {
+  padding: 3rem;
+}
+
+.animation5 {
+  font-family: monospace;
+  font-size: none;
+  display: inline-block;
+  border-right: 3px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(40, end) infinite, blink 0.8s infinite;
+}
+
+/* 🔹 Animation6: Zoomar in vid hover */
+.animation6 {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation6 .zoom-img {
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.animation6:hover .zoom-img,
+.animation6.zoomed .zoom-img {
+  transform: scale(1.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Text som bara visas på mobil */
+.zoom-text {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Visuals page - Animation7: Snurrar och zoomar kontinuerligt */
+.animation7 {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation7 .spinning-img {
+  border-radius: 50%;
+  animation: spin-zoom 5s infinite linear;
+}
+
+.loading-container {
+  width: 250px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 2rem;
+}
+
+.loading-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgb(95, 255, 250),
+    rgb(12, 171, 211),
+    blue,
+    indigo
+  );
+  transition: width 5s linear;
+}
+
+.loading-container.active .loading-bar {
+  width: 100%;
+}
+
+.loading-text {
+  padding: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  z-index: 10;
+  width: 100%;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+  animation: blink 1s infinite alternate;
+}
+
+/* Cosmic Motions Page */
+
+.background-wrapper {
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bakgrundsbild */
+.bkgpicture {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Objekt (planeter, satelliter, meteorer) */
+.object {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+/* Jorden */
+.planet1 {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  animation: orbit1 20s linear infinite;
+  background: radial-gradient(circle at 30% 40%, #0d8ed8, #005b96 50%, #003f5c);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Mars */
+.planet2 {
+  width: 65px;
+  height: 65px;
+  top: 30%;
+  left: 25%;
+  animation: orbit2 25s linear infinite;
+  background: radial-gradient(circle at 40% 40%, #ff6347, #b22222 50%, #800000);
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+}
+
+/* Jupiter*/
+.planet3 {
+  animation: orbit1 30s linear infinite;
+  top: 10%;
+  left: 15%;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(90deg, #c19a6b, #8b4513, #d2691e, #ffdead);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.7);
+}
+
+/* Neptunus*/
+.planet4 {
+  animation: orbit4 30s linear infinite;
+  top: 60%;
+  left: 25%;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #5e9aff, #1a237e);
+  box-shadow: inset 10px -10px 15px rgba(255, 255, 255, 0.3),
+    inset -10px 10px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(94, 154, 255, 0.5);
+}
+
+/*  Meteorfall */
+.meteor {
+  width: 30px;
+  height: 10px;
+  top: -40%;
+  right: 25%;
+  background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0.9));
+  box-shadow: -5px -5px 15px rgba(255, 255, 0, 0.8);
+  animation: fall 6s infinite linear;
+}
+
+.meteor::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 50%;
+  left: 50px;
+  top: -50%;
+  transform: translateY(50%);
+}
+
+/* Glimmande stjärnor */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+}
+
+.star1 {
+  animation: twinkle1 2s infinite alternate;
+}
+
+.star2 {
+  animation: twinkle2 2s infinite alternate;
+}
+
+.star3 {
+  animation: twinkle3 2s infinite alternate;
+  width: 4px;
+  height: 4px;
+}
+
+#visual-page > section.background-wrapper > div.star.star1 {
+  top: 12.7%;
+  left: 21.4%;
+  animation-delay: 0.5s;
+}
+
+#visual-page > section.background-wrapper > div.star.star2 {
+  top: 20.4%;
+  left: 33.5%;
+  animation-delay: 1.5s;
+}
+
+#visual-page > section.background-wrapper > div.star.star3 {
+  top: 12.15%;
+  left: 37.8%;
+  animation-delay: 2s;
+}
+
+@include mixin.respond-to('sm') {
+  .animation1,
+  .animation2,
+  .animation3,
+  .animation4 {
+    font-size: 50px;
+  }
+}
+
+@include mixin.respond-to('sm') {
+  .animation5 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .zoom-text {
+    display: block;
+  }
+
+  .planet1,
+  .planet2,
+  .planet3,
+  .planet4 {
+    width: 20px; /* Smaller planets */
+    height: 20px;
+  }
+
+  .meteor {
+    width: 10px; /* Smaller meteor */
+    height: 5px;
+    top: -10vh; /* Start off-screen */
+    right: 50vw; /* Start at a more visible position */
+    animation: fallmobile 4s infinite linear !important;
+  }
+
+  .star {
+    width: 3px; /* Smaller stars */
+    height: 3px;
+  }
+
+  .star {
+    top: auto;
+    left: auto;
+  }
+
+  .star1 {
+    top: 15%;
+    left: 25%;
+  }
+
+  .star2 {
+    top: 25%;
+    left: 40%;
+  }
+
+  .star3 {
+    top: 10%;
+    left: 60%;
+  }
+}

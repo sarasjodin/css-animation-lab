@@ -25,6 +25,7 @@
   }
 }
 
+.animations,
 .features {
   display: flex;
   flex-direction: column;
@@ -34,6 +35,7 @@
   border-radius: 8px;
   padding: 80px 20px;
 
+  .animations-content,
   .features-content {
     max-width: 800px;
   }

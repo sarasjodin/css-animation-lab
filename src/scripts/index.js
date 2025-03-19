@@ -67,14 +67,41 @@ if (localStorage.getItem('theme') === 'dark') {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var phoneNumber = '+393454171570';
-  var phoneLink = document.getElementById('phone-link');
+  const imageContainer = document.getElementById('zoomable-image');
 
-  // Uppdatera href-attributet till tel-länk
-  phoneLink.setAttribute('href', 'tel:' + phoneNumber);
-
-  // Uppdatera synlig text
-  phoneLink.textContent = '📞 ' + phoneNumber + ' (Italy)';
+  imageContainer.addEventListener('click', function (event) {
+    // Om man klickar på bilden, toggla zoom
+    if (event.target.tagName === 'IMG') {
+      imageContainer.classList.toggle('zoomed');
+    } else {
+      // Om man klickar utanför bilden, ta bort zoom
+      imageContainer.classList.remove('zoomed');
+    }
+  });
 });
 
-getComputedStyle(document.querySelector('.nav')).height;
+document.addEventListener('DOMContentLoaded', function () {
+  const zoomContainer = document.getElementById('zoomable-image');
+  const title = document.getElementById('zoom-title');
+
+  // Uppdatera titeln beroende på skärmstorlek
+  function updateTitle() {
+    if (window.innerWidth <= 768) {
+      title.textContent = 'Tap to zoom';
+    } else {
+      title.textContent = 'Zooming image on hover';
+    }
+  }
+
+  updateTitle(); // Kör vid sidladdning
+  window.addEventListener('resize', updateTitle); // Uppdatera vid fönsterstorlek ändring
+
+  // Lägg till tap-funktionalitet för mobil
+  zoomContainer.addEventListener('click', function (event) {
+    if (event.target.tagName === 'IMG') {
+      zoomContainer.classList.toggle('zoomed');
+    } else {
+      zoomContainer.classList.remove('zoomed');
+    }
+  });
+});

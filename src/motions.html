@@ -64,7 +64,7 @@
                 height="100"
               />
             </picture>
-            <span class="company-name">Sassy Sara</span>
+            <span class="company-name">CSS<wbr /> Motion<wbr /> Lab</span>
           </a>
 
           <!-- Sökfält -->
@@ -86,8 +86,9 @@
             <ul class="menu">
               <li class="menu-item"><a href="./index.html">Home</a></li>
               <li class="menu-item"><a href="./about.html">About</a></li>
-              <li class="menu-item active"><a href="#">Sass</a></li>
-              <li class="menu-item"><a href="./process.html">Process</a></li>
+              <li class="menu-item"><a href="./visuals.html">Visuals</a></li>
+              <li class="menu-item"><a href="./triggers.html">Triggers</a></li>
+              <li class="menu-item active"><a href="#">Motions</a></li>
               <li class="dropdown">
                 <a href="#">Portfolio items ▾</a>
                 <ul class="dropdown-menu">
@@ -128,187 +129,50 @@
         </div>
         <button class="primary button" id="theme-toggle">🌙 Dark mode</button>
       </header>
-      <main id="sass-page">
+      <main id="visual-page">
         <section class="hero">
           <div class="hero-content">
-            <h1>More about my "Sassy Website"</h1>
+            <h1>My Cosmic Motions page</h1>
             <p>
-              This project is part of the Web Development program at Mid Sweden
-              University and involves creating a website using<br />Node.js,
-              NPM, Parcel, Sass (SCSS) utilising the 7-1 method.
+              This project, developed as part of the Web Development program at
+              Mid Sweden University, explores the power of CSS animations.
+              Through the use of @keyframes, transitions, and transforms, the
+              project create <strong>motion</strong> - in a cosmic scene. Can
+              you find the meteor and the three blinking stars?
             </p>
           </div>
         </section>
-        <section class="features">
+        <section class="background-wrapper">
           <div>
-            <h2>Purpose of the assignment</h2>
-            <ul>
-              <li>Understand the purpose of CSS preprocessors.</li>
-              <li>Learn how to use SASS to simplify CSS development.</li>
-              <li>
-                Practically apply the development environment set up in previous
-                modules.
-              </li>
-              <li>
-                Be able to automate the conversion of SASS files using Parcel.
-              </li>
-            </ul>
+            <picture>
+              <!-- <source
+                srcset="your-background-image-large.jpg"
+                media="(min-width: 1024px)"
+              />
+              <source
+                srcset="your-background-image-medium.jpg"
+                media="(min-width: 768px)"
+              /> -->
+              <img
+                class="bkgpicture"
+                src="./images/bkg.webp"
+                alt="Mystical Night Sky"
+              />
+            </picture>
           </div>
-        </section>
-        <section class="features">
-          <div>
-            <h2>Minimum requirements</h2>
-            <ul>
-              <li>
-                A simple, fictional website with at least five menu options (not
-                all need to be functional).
-              </li>
-              <li>
-                At least two HTML pages (a homepage and a subpage about Sass).
-              </li>
-              <li>
-                Based on a Parcel boilerplate, but without reusing old CSS
-                files.
-              </li>
-              <li>
-                Use of variables (at least the color scheme should be stored as
-                variables).
-              </li>
-              <li>
-                Color functions (at minimum, "darken" and "lighten" should be
-                used, but more are encouraged).
-              </li>
-              <li>
-                Nesting, Mixins, and Selector Inheritance (using the "@extend"
-                keyword).
-              </li>
-              <li>
-                If/else statements, at least one partial, and a well-structured
-                CSS file organization.
-              </li>
-              <li>
-                Deployment should not use FTP/SFTP hosting but instead platforms
-                such as GitHub Pages, Netlify, Vercel, or Render.
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="features">
-          <div>
-            <h2>My evaluation</h2>
-            <p>
-              Sass extends the functionality of regular CSS by introducing
-              powerful features that make styling more efficient, maintainable,
-              and scalable. Some key advantages and disadvantages of using Sass
-              include:
-            </p>
 
-            <h3>Pros of the CSS preprocessor Sass</h3>
-            <ul>
-              <li>
-                <strong>Better organization</strong><br />Using partials and
-                imports allows for a structured and modular CSS approach.
-              </li>
-              <li>
-                <strong>Variables</strong><br />Define colors, font sizes, and
-                other values in one place and reuse them throughout the styles.
-              </li>
-              <li>
-                <strong>Mixins</strong><br />Write reusable blocks of CSS to
-                avoid code repetition and improve maintainability.
-              </li>
-              <li>
-                <strong>Selector inheritance @extend</strong><br />Helps in
-                reducing redundancy by allowing shared styles between elements.
-              </li>
-              <li>
-                <strong>Functions & nesting</strong><br />Improves readability
-                and makes it easier to write CSS with logical hierarchy.
-              </li>
-              <li>
-                <strong>Math operations</strong><br />Enables calculations
-                directly in CSS, such as adjusting padding or font sizes
-                dynamically.
-              </li>
-            </ul>
+          <div class="object meteor" alt="Meteor"></div>
+          <div class="object planet1" alt="Planet 1"></div>
+          <div class="object planet2" alt="Planet 2"></div>
+          <div class="object planet3" alt="Planet 3"></div>
+          <div class="object planet4" alt="Planet 4"></div>
 
-            <h3>Cons of the CSS preprocessor Sass</h3>
-            <ul>
-              <li>
-                <strong>Learning curve</strong><br />While Sass simplifies many
-                CSS tasks, beginners may find it overwhelming at first.
-              </li>
-              <li>
-                <strong>Compilation required</strong><br />Unlike standard CSS,
-                Sass needs to be compiled into regular CSS before it can be used
-                in the browser. Parcel is taking care of that for this website.
-              </li>
-              <li>
-                <strong>Can encourage overuse</strong><br />Nesting too deeply
-                can lead to overly specific and difficult-to-maintain styles.
-              </li>
-              <li>
-                <strong>Tooling dependency</strong><br />Requires Node.js, npm,
-                and build tools like Parcel, Webpack or Vite, which adds
-                complexity.
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="features">
-          <div>
-            <h3>How was it to get started working with a CSS preprocessor?</h3>
-
-            <article>
-              <h4>The initial challenge</h4>
-              <p>
-                Transitioning from regular CSS to Sass was initially
-                overwhelming due to the new syntax and additional setup
-                required. Instead of taking small steps, I decided to dive
-                straight into the
-                <strong>7-1 pattern method</strong>, which is quite complex for
-                someone without much prior Sass experience.
-              </p>
-            </article>
-
-            <article>
-              <h4>The learning curve</h4>
-              <p>
-                As I became more comfortable with
-                <strong>variables, mixins, and nesting</strong>, I quickly
-                realized the immense benefits of Sass. The ability to store and
-                reuse values, and to be able to nest made me think a lot about
-                the structure and readability.
-              </p>
-            </article>
-
-            <article>
-              <h4>Boosting efficiency with automation</h4>
-              <p>
-                One of the biggest game-changers was automating the Sass
-                compilation process using <strong>Parcel</strong>. This made it
-                seamless to integrate Sass into my workflow, eliminating the
-                need for manual SCSS to CSS updates and ensuring that all styles
-                were efficiently processed.
-              </p>
-            </article>
-
-            <article>
-              <h4>The power of structured styling</h4>
-              <p>
-                The ability to
-                <strong>structure and manage multiple stylesheets</strong>
-                within a single main.scss file has significantly streamlined my
-                development process. By organizing styles into modular partials,
-                I can maintain a clean, scalable, and **efficient** codebase,
-                making future updates seamless. I look forward to perfecting my
-                workflow and exploring new ideas.
-              </p>
-            </article>
-          </div>
+          <!-- Stjärnor -->
+          <div class="star star1" alt="Star 1"></div>
+          <div class="star star2" alt="Star 2"></div>
+          <div class="star star3" alt="Star 3"></div>
         </section>
       </main>
-
       <footer class="footer">
         <div class="legal-footer-section">
           <div>
@@ -550,8 +414,9 @@
             <ul class="menu">
               <li class="menu-item"><a href="./index.html">Home</a></li>
               <li class="menu-item"><a href="./about.html">About</a></li>
-              <li class="menu-item active"><a href="#">Sass</a></li>
-              <li class="menu-item"><a href="./process.html">Process</a></li>
+              <li class="menu-item"><a href="./motions.html">Visuals</a></li>
+              <li class="menu-item"><a href="./triggers.html">Triggers</a></li>
+              <li class="menu-item active"><a href="#">Motions</a></li>
               <li>
                 <a
                   href="https://saras-portfolio.netlify.app/"

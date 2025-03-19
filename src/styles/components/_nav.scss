@@ -98,7 +98,6 @@
   .menu {
     display: flex;
     flex-direction: row;
-    gap: 1rem; // Mellanrum mellan länkar
     padding: 0;
   }
 
@@ -113,7 +112,7 @@
     a {
       display: inline-block;
       text-decoration: none;
-      padding: 10px 15px;
+      padding: 10px 10px;
       border-radius: 8px;
     }
   }

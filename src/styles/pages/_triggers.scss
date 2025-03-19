@@ -1,14 +1,19 @@
 @use '../abstracts/variables' as vars;
 
-#process-page .hero {
-  background: #f4f4f4;
+#trigger-page .hero {
+  background: #e5e0e3;
 }
 
-.dark-mode #process-page .hero {
+.dark-mode #trigger-page .hero {
   background: map-get(vars.$dark-theme, 'bg');
 }
 
+.animations,
 .features {
   max-width: 100%;
   overflow-x: auto; /* Gör att det går att rulla horisontellt om texten är för lång */
+}
+
+#trigger-page > section.animations > div > h2 {
+  text-align: center;
 }

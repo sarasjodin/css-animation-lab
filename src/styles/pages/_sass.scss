@@ -1,9 +1,0 @@
-@use '../abstracts/variables' as vars;
-
-#sass-page .hero {
-  background: #f4f4f4;
-}
-
-.dark-mode #sass-page .hero {
-  background: map-get(vars.$dark-theme, 'bg');
-}

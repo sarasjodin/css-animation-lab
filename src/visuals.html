@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.scss" />
-    <title>Process | Sassy Sheets with scss syntax</title>
+    <title>About Sass | Sassy Sheets with scss syntax</title>
     <!-- Google Fonts (Preloaded for better performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,7 +64,7 @@
                 height="100"
               />
             </picture>
-            <span class="company-name">Sassy Sara</span>
+            <span class="company-name">CSS<wbr /> Motion<wbr /> Lab</span>
           </a>
 
           <!-- Sökfält -->
@@ -86,8 +86,9 @@
             <ul class="menu">
               <li class="menu-item"><a href="./index.html">Home</a></li>
               <li class="menu-item"><a href="./about.html">About</a></li>
-              <li class="menu-item"><a href="./sass.html">Sass</a></li>
-              <li class="menu-item active"><a href="#">Process</a></li>
+              <li class="menu-item active"><a href="#">Visuals</a></li>
+              <li class="menu-item"><a href="./triggers.html">Triggers</a></li>
+              <li class="menu-item"><a href="./motions.html">Motions</a></li>
               <li class="dropdown">
                 <a href="#">Portfolio items ▾</a>
                 <ul class="dropdown-menu">
@@ -98,7 +99,7 @@
                       rel="noopener noreferrer"
                       aria-label="Open AI Poem Generator in a new tab"
                     >
-                      AI Poem Generator 🔗
+                      AI poem generator 🔗
                     </a>
                   </li>
                   <li>
@@ -108,7 +109,7 @@
                       rel="noopener noreferrer"
                       aria-label="Open Weather App in a new tab"
                     >
-                      Weather App 🔗
+                      Weather app 🔗
                     </a>
                   </li>
                   <li>
@@ -118,7 +119,7 @@
                       rel="noopener noreferrer"
                       aria-label="Open Time Zone Converter in a new tab"
                     >
-                      Time Zone Converter 🔗
+                      Time zone converter 🔗
                     </a>
                   </li>
                 </ul>
@@ -126,220 +127,61 @@
             </ul>
           </nav>
         </div>
-        <button class="primary button" id="theme-toggle">🌙 Dark Mode</button>
+        <button class="primary button" id="theme-toggle">🌙 Dark mode</button>
       </header>
-      <main id="process-page">
+      <main id="visual-page">
         <section class="hero">
           <div class="hero-content">
-            <h1>
-              From Idea to Deployment<br />Building a Website with Sass 7-1
-              method and Parcel automation
-            </h1>
-          </div>
-        </section>
-        <section class="features">
-          <div>
-            <h2>Key Learnings</h2>
-            <ol>
-              <li>
-                I should have started simple (avoid doing the 7-1 method as my
-                first Sass assignment)
-              </li>
-              <li>
-                Some parts like the variables, nesting and simple mixins are
-                quite intuitive, other things I tested I'll have to improve with
-                time.
-              </li>
-              <li>
-                We need some time to learn new tools, but working with Scss and
-                Parcel were very intuitive.
-              </li>
-              <li>
-                I had some issues with paths to urls and images, and put a lot
-                of work in finding the perfect npm run script to clear cache and
-                rebuild quickly. I believed it saved me lots of time -
-                especially in the long run!
-              </li>
-            </ol>
+            <h1>My Motion Visuals page</h1>
             <p>
-              Finally I have started my Sass journey ❤️ I've always been
-              interested, but I never exceeded the work load to get through with
-              a Parcel or similar automation process, without that there is no
-              reason why you should go from css to Sass.
+              This project is part of the Web Development program at Mid Sweden
+              University and focuses on creating dynamic and engaging CSS
+              animations for both <strong>text and images</strong>. The goal is
+              to explore and implement modern animation techniques using CSS
+              keyframes, transitions, and transforms to enhance user experience
+              and interactivity.
             </p>
           </div>
         </section>
-        <section class="features">
+        <section class="animations">
           <div>
-            <h2>My Development Process</h2>
-            <ol>
-              <li>
-                Reused a previous boilerplate (but removed all previous css code
-                and Git history)
-              </li>
-              <li>
-                Created the 7-1 patters for Sass and its main.scss file with
-                @use
-              </li>
-              <li>Installed Sass <code>npm install sass -D</code></li>
-              <li>
-                Experimented with a Bootstrap menu for large screens Bootstrap
-                Offcanvas responsive menu
-              </li>
-              <li>
-                Realized that I was already developing and had to start
-                commiting to GitHub...
-              </li>
-              <li>Created the GitHub repository!</li>
-              <li>
-                I decided to use Render for the first time for this site.
-                Preeviously I've mainly used Netlify and GitHub Pages for CI/CD
-                deployment.
-              </li>
-              <li>
-                In the end I decided to create a pure scss site, to avoid
-                Bootstrap dependancy problems for my first scss-site.
-              </li>
-              <li>
-                I've cheched the requests for the assigment and started to
-                sketch down some ideas for mixins. I decided to start with a
-                mixin handling background colors, hover colors, different shapes
-                (squares and circular shapes) and sizes of social media icons. I
-                was almost able to fulfill the assignment requirement only with
-                my first Mixin...
-              </li>
-              <li>
-                The next step was to plan and prepare the pages. I decided
-                quickly the pages needed and decided to add some of my old
-                portfolio pages...to create yet another portfolio page!
-              </li>
-              <li>
-                After working some I realized that my 7-1 method wasn't very
-                well organized. So I started to dived the scss in a more strict
-                way. It felt like I would never finish.
-              </li>
-              <li>
-                At this point I started to improve the color variables, the
-                responsiveness and the header, hamburger menu and footer. I
-                ended up with a lot of color variables, because I would like to
-                create a reusable and flexible boilerplate (a boilerplated is
-                like a template) to improve with time.
-              </li>
-              <li>
-                When I learnt to differentiate (mainly variables and mixins in
-                the code) like this:<br />@use '../abstracts/mixins' as
-                mixin;<br />@use '../abstracts/variables' as vars;<br />it got
-                easier to pick up the new syntax.
-              </li>
-            </ol>
+            <h2>Rainbow colored text</h2>
+            <div class="animation1">Somewhere Over the Rainbow</div>
+            <div class="animation2">Skies are blue</div>
+            <div class="animation3">And the dreams that you dare to dream</div>
+            <div class="animation4">Really do come true</div>
           </div>
         </section>
-        <section class="features">
+        <section class="animations">
           <div>
-            <h2>For this web site I have implemented</h2>
-            <ul>
-              <li>
-                social icons with shape, size and... variables including if
-                statement
-              </li>
-              <li>light and dark theme with theme button</li>
-              <li>Responsive header with a hamburger menu for mobiles</li>
-              <li>Breakpoint variables for media queries</li>
-              <li>
-                Every second section has another color, to create some
-                variations and structure.
-              </li>
-              <li>Implemented primary and secondary button styles.</li>
-              <li>
-                Started to create some policy templates for the footer links.
-              </li>
-              <li>grid template for my color card tests, see below.</li>
-            </ul>
+            <h2>Typewriter Effect</h2>
+            <div><p class="animation5">&nbsp;"Don't worry, Be happy!"</p></div>
+            <cite>Bobby McFerrin, 1988</cite>
           </div>
         </section>
-        <section class="features">
-          <h2>A typical 7-1 method file structure</h2>
-          <pre>
-            <code>
-              📂 styles
-              ├── 📂 abstracts/          # Variables, mixins, functions
-              │   ├──📄 _variables.scss    # Fonts, colors, spacing
-              │   ├──📄 _mixins.scss       # Reusable mixins
-              │   └──📄 _functions.scss    # Sass functions
-              ├── 📂 base/               # Base styles
-              │   ├──📄 _reset.scss        # CSS reset or Normalize.css
-              │   ├──📄 _typography.scss   # Global typography styles
-              │   └──📄 _global.scss       # Global styles and layout
-              ├── 📂 layout/             # Large layout components
-              │   ├──📄 _header.scss       # Header styling
-              │   ├──📄 _footer.scss       # Footer styling
-              │   └──📄 _main.scss         # Main content area styling
-              ├── 📂 components/         # UI Components
-              │   ├──📄 _buttons.scss      # Buttons & CTA styles
-              │   ├──📄 _cards.scss        # Card components
-              │   └──📄 _sections.scss     # Section styling
-              ├── 📂 pages/              # Page-specific styles
-              │   ├──📄 _home.scss         # Home page styling
-              │   ├──📄 _about.scss        # About page styling
-              │   ├──📄 _sass.scss         # Sass page styling
-              │   └──📄 _process.scss      # Process page styling
-              ├── 📂 themes/             # Theme styles
-              │   └──📄 _theme.scss         # Light & Dark mode styles
-              ├── 📂 vendors/             # Vendors styles
-              │   └──📄 _normalize.scss     # Normalize, Bootstrap, etc.
-              └📄 main.scss               # Main SCSS file
-            </code>
-          </pre>
-        </section>
-        <section class="features">
-          <div class="card-grid">
-            <!-- Saturate -->
-            <div class="card saturate">
-              <h3>saturate()</h3>
-              <div class="color-box"></div>
-              <p>Increases the color intensity</p>
-              <code>$color: saturate(#3498db, 30%);</code>
-            </div>
-
-            <!-- Desaturate -->
-            <div class="card desaturate">
-              <h3>desaturate()</h3>
-              <div class="color-box"></div>
-              <p>Reduces color intensity</p>
-              <code>$color: desaturate(#3498db, 30%);</code>
-            </div>
-
-            <!-- Adjust Hue -->
-            <div class="card adjust-hue">
-              <h3>adjust-hue()</h3>
-              <div class="color-box"></div>
-              <p>Change the hue by a given degree</p>
-              <code>$color: adjust-hue(#3498db, 45deg);</code>
-            </div>
-
-            <!-- RGBA -->
-            <div class="card rgba">
-              <h3>rgba()</h3>
-              <div class="color-box"></div>
-              <p>Adds transparency</p>
-              <code>$color: rgba(#3498db, 0.5);</code>
-            </div>
-
-            <!-- Mix -->
-            <div class="card mix">
-              <h3>mix()</h3>
-              <div class="color-box"></div>
-              <p>Blends two colors</p>
-              <code>$color: mix(#3498db, #ff5733, 50%);</code>
-            </div>
-
-            <!-- Invert -->
-            <div class="card invert">
-              <h3>invert()</h3>
-              <div class="color-box"></div>
-              <p>Invert a color</p>
-              <code>$color: invert(#3498db);</code>
-            </div>
+        <section class="animations">
+          <h2>Zooming and rotating image</h2>
+          <div class="animation7" role="presentation">
+            <picture>
+              <!-- WebP för moderna webbläsare -->
+              <source
+                srcset="./images/developer-400x400.webp"
+                type="image/webp"
+              />
+              <!-- JPEG som fallback för äldre webbläsare -->
+              <source
+                srcset="./images/developer-400x400.jpg"
+                type="image/jpeg"
+              />
+              <!-- Standardbild -->
+              <img
+                src="./images/developer-400x400.jpg"
+                class="spinning-img"
+                width="200"
+                alt="Developer at work"
+              />
+            </picture>
+            <cite>Sara Sjödin Scolari, Full-stack developer</cite>
           </div>
         </section>
       </main>
@@ -584,8 +426,9 @@
             <ul class="menu">
               <li class="menu-item"><a href="./index.html">Home</a></li>
               <li class="menu-item"><a href="./about.html">About</a></li>
-              <li class="menu-item"><a href="./sass.html">Sass</a></li>
-              <li class="menu-item active"><a href="#">Process</a></li>
+              <li class="menu-item active"><a href="#">Visuals</a></li>
+              <li class="menu-item"><a href="./triggers.html">Triggers</a></li>
+              <li class="menu-item"><a href="./motions.html">Motions</a></li>
               <li>
                 <a
                   href="https://saras-portfolio.netlify.app/"

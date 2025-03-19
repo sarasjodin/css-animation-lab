@@ -249,7 +249,7 @@ a {
 }
 
 .hero {
-  background: map-get(vars.$light-theme, 'gray-100');
+  background: map-get(vars.$light-theme, 'gray-200');
 }
 
 .dark-mode .hero {
@@ -261,7 +261,7 @@ section.features {
     background: map-get(vars.$light-theme, 'bg');
   }
   &:nth-child(even) {
-    background: map-get(vars.$light-theme, 'white');
+    background: map-get(vars.$light-theme, 'focus-color-bkg');
   }
 }
 
@@ -272,6 +272,14 @@ section.features {
   &:nth-child(even) {
     background: map-get(vars.$dark-theme, 'section-bg');
   }
+}
+
+section.animations {
+  background: map-get(vars.$light-theme, 'bg');
+}
+
+.dark-mode section.animations {
+  background: map-get(vars.$dark-theme, 'bg');
 }
 
 @include mixin.respond-to('lg') {
