@@ -44,7 +44,7 @@
     "svgo": "3.3.2"
   },
   "engines": {
-    "node": ">=22.0.0",
+    "node": "v22.13.0",
     "preinstall": "npm -v | grep '9.' || (echo '⚠️ Please use npm 9.x' && exit 1)"
   }
 }
